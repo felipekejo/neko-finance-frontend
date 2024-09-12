@@ -1,12 +1,11 @@
-import { Sidebar } from "@/components/Sidebar";
+import { BodyHome } from '@/components/BodyHome'
+import { Sidebar } from '@/components/Sidebar'
 
 export default function Home() {
   return (
-  
-  <main className="flex h-screen w-full">
-    <Sidebar />
-    <h1>Home</h1>
-    <p>Welcome to your new Neko app!</p>
-  </main>
-  );
+    <main className="flex h-screen w-full">
+      <Sidebar />
+      <BodyHome />
+    </main>
+  )
 }
