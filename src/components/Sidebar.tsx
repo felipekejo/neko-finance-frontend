@@ -1,5 +1,6 @@
 'use client'
 
+import { HomeIcon } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -19,6 +20,31 @@ export function Sidebar() {
           NekoFinance
         </h1>
       </Link>
+      <Link href="/" className="flex items-center gap-2 py-1 rounded-lg justify-center">
+      <div className="flex items-center gap-2 justify-center">
+        <HomeIcon className="text-lg"/>
+        <p className="text-lg">Home</p>
+      </div>
+      </Link>
+      <Link href="/" className="flex items-center gap-2 py-1 rounded-lg justify-center">
+      <div className="flex items-center gap-2 justify-center">
+        <HomeIcon className="text-lg"/>
+        <p className="text-lg">Home</p>
+      </div>
+      </Link>
+      <Link href="/" className="flex items-center gap-2 py-1 rounded-lg justify-center">
+      <div className="flex items-center gap-2 justify-center">
+        <HomeIcon className="text-lg"/>
+        <p className="text-lg">Home</p>
+      </div>
+      </Link>
+      <Link href="/" className="flex items-center gap-2 py-1 rounded-lg justify-center">
+      <div className="flex items-center gap-2 justify-center">
+        <HomeIcon className="text-lg"/>
+        <p className="text-lg">Home</p>
+      </div>
+      </Link>
+
 
     </nav>
     FOOTER
