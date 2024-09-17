@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Suspense } from 'react'
 import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
 import { z } from 'zod'
 
 const singInForm = z.object({
@@ -23,6 +24,7 @@ export default function SignIn() {
   async function handleSignIn(data: SignInForm) {
     console.log(data)
     await new Promise((resolve) => setTimeout(resolve, 1000))
+    toast.success('Sign In success')
   }
 
   return (
