@@ -7,12 +7,14 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { AccountMenu } from './account-menu'
 import { NavLink } from './Nav-Link'
+import { ThemeToggle } from './theme/theme-toggle'
 
 export function Header() {
   return (
-    <div className="border-b border-foreground/5">
-      <div className="flex h-16 items-center gap-6 px-6">
+    <div className="border-b ">
+      <div className="flex h-16 items-center gap-6 px-6 ">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="./icons/neko.svg"
@@ -41,6 +43,10 @@ export function Header() {
             Charts
           </NavLink>
         </nav>
+        <div className="ml-auto flex items-center gap-2">
+          <ThemeToggle />
+          <AccountMenu />
+        </div>
       </div>
     </div>
   )
