@@ -20,7 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           &copy; {new Date().getFullYear()} NekoFinance
         </footer>
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center relative">
         {children}
       </div>
     </div>
