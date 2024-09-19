@@ -40,7 +40,7 @@ export function Header() {
           </NavLink>
           <NavLink href="/stats">
             <ChartNoAxesCombined className="h-4 w-4" />
-            Charts
+            Summary
           </NavLink>
         </nav>
         <div className="ml-auto flex items-center gap-2">
