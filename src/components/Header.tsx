@@ -38,7 +38,7 @@ export function Header() {
             <ArrowRightLeft className="h-4 w-4" />
             Transactions
           </NavLink>
-          <NavLink href="/stats">
+          <NavLink href="/summary">
             <ChartNoAxesCombined className="h-4 w-4" />
             Summary
           </NavLink>
