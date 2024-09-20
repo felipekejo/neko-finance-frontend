@@ -1,7 +1,7 @@
 import { ChevronLeft, ChevronRight, Plus, Upload } from 'lucide-react'
 import { Button } from '../ui/button'
 import { Dialog, DialogContent, DialogTrigger } from '../ui/dialog'
-import { TransactionAdd } from './transaction-add'
+import { AddTransaction } from './add-transaction-modal'
 
 export function TransactionHeader() {
   return (
@@ -25,7 +25,7 @@ export function TransactionHeader() {
               </Button>
             </DialogTrigger>
             <DialogContent>
-              <TransactionAdd />
+              <AddTransaction />
             </DialogContent>
           </Dialog>
           <Button variant="outline" className="h-8 w-24 p-0 gap-2">
