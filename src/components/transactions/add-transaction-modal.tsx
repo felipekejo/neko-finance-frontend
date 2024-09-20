@@ -31,6 +31,7 @@ const addTransactionForm = z.object({
   amount: z.number().min(1),
   category: z.string(),
   date: z.date(),
+  type: z.enum(['outcomes', 'incomes']),
 })
 
 type AddTransactionForm = z.infer<typeof addTransactionForm>
@@ -52,12 +53,23 @@ export function AddTransaction() {
           onSubmit={form.handleSubmit(handleAddTransaction)}
           className="space-y-4"
         >
-          <Tabs defaultValue="outcomes">
-            <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="outcomes">Outcomes</TabsTrigger>
-              <TabsTrigger value="incomes">Incomes</TabsTrigger>
-            </TabsList>
-          </Tabs>
+          <FormField
+            control={form.control}
+            name="type"
+            render={({ field }) => (
+              <FormItem>
+                <Tabs onValueChange={field.onChange}>
+                  <FormControl>
+                    <TabsList className="grid w-full grid-cols-2">
+                      <TabsTrigger value="outcomes">Outcomes</TabsTrigger>
+                      <TabsTrigger value="incomes">Incomes</TabsTrigger>
+                    </TabsList>
+                  </FormControl>
+                </Tabs>
+              </FormItem>
+            )}
+          />
+
           <FormField
             control={form.control}
             name="date"
