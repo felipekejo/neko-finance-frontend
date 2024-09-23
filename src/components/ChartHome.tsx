@@ -53,7 +53,7 @@ export function ChartHome() {
   }, [])
 
   return (
-    <Card className="flex flex-col h-full">
+    <Card className="col-span-3">
       <CardHeader className="items-center pb-0">
         <CardTitle>Pie Chart - Donut with Text</CardTitle>
       </CardHeader>

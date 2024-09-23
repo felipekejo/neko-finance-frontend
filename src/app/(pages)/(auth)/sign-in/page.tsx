@@ -17,7 +17,6 @@ const signInForm = z.object({
 type SignInForm = z.infer<typeof signInForm>
 
 export default function SignIn() {
-
   const router = useRouter()
   const {
     register,
@@ -28,10 +27,8 @@ export default function SignIn() {
   async function handleSignIn(data: signInForm) {
     console.log(data)
     try {
-      
-
       await new Promise((resolve) => setTimeout(resolve, 2000))
-      
+
       toast.success('Sign in success')
       router.push('/')
     } catch (error) {
@@ -42,10 +39,10 @@ export default function SignIn() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className="p-8 bg-background">
-        <Button variant={'ghost'} asChild className='absolute top-8 right-8'>
-        <Link href={"/sign-up"}  >Create Account</Link>
+        <Button variant={'ghost'} asChild className="absolute top-8 right-8">
+          <Link href={'/sign-up'}>Create Account</Link>
         </Button>
-       
+
         <div className="w-[350px] flex flex-col justify-center gap-6">
           <div className="flex flex-col gap-2 text-center">
             <h1 className="text-2xl font-semibold tracking-tight">
